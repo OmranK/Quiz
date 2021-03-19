@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B7E24F642604776A00D12914 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E24F5A2604776A00D12914 /* QuizEngine.framework */; };
-		B7E24F692604776A00D12914 /* QuizEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F682604776A00D12914 /* QuizEngineTests.swift */; };
-		B7E24F6B2604776A00D12914 /* QuizEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E24F5D2604776A00D12914 /* QuizEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7E24F792604779600D12914 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F782604779600D12914 /* Flow.swift */; };
+		B7E24F7D260477A100D12914 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F7C260477A100D12914 /* Result.swift */; };
+		B7E24F81260477A600D12914 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F80260477A600D12914 /* Router.swift */; };
+		B7E24F85260477B000D12914 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F84260477B000D12914 /* Game.swift */; };
+		B7E24F8B260477C600D12914 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F8A260477C600D12914 /* FlowTest.swift */; };
+		B7E24F8F260477D800D12914 /* FakeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F8E260477D800D12914 /* FakeRouter.swift */; };
+		B7E24F93260477DD00D12914 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24F92260477DD00D12914 /* GameTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +29,16 @@
 
 /* Begin PBXFileReference section */
 		B7E24F5A2604776A00D12914 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E24F5D2604776A00D12914 /* QuizEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizEngine.h; sourceTree = "<group>"; };
 		B7E24F5E2604776A00D12914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E24F632604776A00D12914 /* QuizEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E24F682604776A00D12914 /* QuizEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngineTests.swift; sourceTree = "<group>"; };
 		B7E24F6A2604776A00D12914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E24F782604779600D12914 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		B7E24F7C260477A100D12914 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B7E24F80260477A600D12914 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B7E24F84260477B000D12914 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B7E24F8A260477C600D12914 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
+		B7E24F8E260477D800D12914 /* FakeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRouter.swift; sourceTree = "<group>"; };
+		B7E24F92260477DD00D12914 /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +81,11 @@
 		B7E24F5C2604776A00D12914 /* QuizEngine */ = {
 			isa = PBXGroup;
 			children = (
-				B7E24F5D2604776A00D12914 /* QuizEngine.h */,
 				B7E24F5E2604776A00D12914 /* Info.plist */,
+				B7E24F782604779600D12914 /* Flow.swift */,
+				B7E24F7C260477A100D12914 /* Result.swift */,
+				B7E24F80260477A600D12914 /* Router.swift */,
+				B7E24F84260477B000D12914 /* Game.swift */,
 			);
 			path = QuizEngine;
 			sourceTree = "<group>";
@@ -80,8 +93,10 @@
 		B7E24F672604776A00D12914 /* QuizEngineTests */ = {
 			isa = PBXGroup;
 			children = (
-				B7E24F682604776A00D12914 /* QuizEngineTests.swift */,
 				B7E24F6A2604776A00D12914 /* Info.plist */,
+				B7E24F8A260477C600D12914 /* FlowTest.swift */,
+				B7E24F8E260477D800D12914 /* FakeRouter.swift */,
+				B7E24F92260477DD00D12914 /* GameTest.swift */,
 			);
 			path = QuizEngineTests;
 			sourceTree = "<group>";
@@ -93,7 +108,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E24F6B2604776A00D12914 /* QuizEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +161,11 @@
 				TargetAttributes = {
 					B7E24F592604776A00D12914 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					B7E24F622604776A00D12914 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -194,6 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E24F7D260477A100D12914 /* Result.swift in Sources */,
+				B7E24F81260477A600D12914 /* Router.swift in Sources */,
+				B7E24F792604779600D12914 /* Flow.swift in Sources */,
+				B7E24F85260477B000D12914 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E24F692604776A00D12914 /* QuizEngineTests.swift in Sources */,
+				B7E24F8B260477C600D12914 /* FlowTest.swift in Sources */,
+				B7E24F8F260477D800D12914 /* FakeRouter.swift in Sources */,
+				B7E24F93260477DD00D12914 /* GameTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +362,7 @@
 		B7E24F6F2604776A00D12914 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AcronDesigns.QuizEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +388,7 @@
 		B7E24F702604776A00D12914 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +413,8 @@
 		B7E24F722604776A00D12914 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5752TAHCMC;
@@ -399,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AcronDesigns.QuizEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -406,6 +434,8 @@
 		B7E24F732604776A00D12914 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5752TAHCMC;
