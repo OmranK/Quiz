@@ -44,8 +44,8 @@ class NavigationControllerRouterTest: XCTestCase {
         let viewController = UIViewController()
         let secondViewController = UIViewController()
         
-        let result = Result(answers: [Question.singleAnswer("Q1") : ["A1"]], score: 10)
-        let secondResult = Result(answers: [Question.singleAnswer("Q2") : ["A2"]], score: 20)
+        let result = Result.make(answers: [Question.singleAnswer("Q1") : ["A1"]], score: 10)
+        let secondResult = Result.make(answers: [Question.singleAnswer("Q2") : ["A2"]], score: 20)
         
         factory.stub(result: result, with: viewController)
         factory.stub(result: secondResult, with: secondViewController)
@@ -85,21 +85,5 @@ class ViewControllerFactoryStub: ViewControllerFactory {
     
     func resultViewController(for result: Result<Question<String>, [String]>) -> UIViewController {
         return stubbedResults[result] ?? UIViewController()
-    }
-}
-
-@testable import QuizEngine
-
-extension Result: Hashable {
-    
-    static func make(answers: [Question: Answer] = [:], score: Int = 0) -> Result<Question, Answer> {
-        return Result(answers: answers, score: score)
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(score)
-    }
-    public static func == (lhs: Result<Question, Answer>, rhs: Result<Question, Answer>) -> Bool {
-        return lhs.score == rhs.score
     }
 }

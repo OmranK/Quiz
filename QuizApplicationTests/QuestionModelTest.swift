@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 @testable import QuizApplication
 
-class QuestionTest: XCTestCase {
+class QuestionModelTest: XCTestCase {
     
     func test_hashValue_singleAnswer_returnsTypeHash() {
         let type = "a string"
