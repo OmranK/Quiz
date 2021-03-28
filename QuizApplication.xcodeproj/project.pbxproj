@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B710A76A261049AA00794E58 /* QuestionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710A769261049AA00794E58 /* QuestionTest.swift */; };
 		B710A76E26104CDC00794E58 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710A76D26104CDC00794E58 /* Question.swift */; };
+		B710A77226105BCE00794E58 /* iOSViewControllerFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710A77126105BCE00794E58 /* iOSViewControllerFactoryTest.swift */; };
+		B710A77626105C8300794E58 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710A77526105C8300794E58 /* iOSViewControllerFactory.swift */; };
 		B7224B1A260281E0002C0B22 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7224B19260281E0002C0B22 /* ResultsViewControllerTest.swift */; };
 		B7224B2226028281002C0B22 /* ResultsViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7224B2126028281002C0B22 /* ResultsViewControlller.swift */; };
 		B74915E42604BE4900B5EA4A /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74915E32604BE4900B5EA4A /* QuizEngine.framework */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		B710A769261049AA00794E58 /* QuestionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTest.swift; sourceTree = "<group>"; };
 		B710A76D26104CDC00794E58 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B710A77126105BCE00794E58 /* iOSViewControllerFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactoryTest.swift; sourceTree = "<group>"; };
+		B710A77526105C8300794E58 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iOSViewControllerFactory.swift; path = ../../iOSViewControllerFactory.swift; sourceTree = "<group>"; };
 		B7224B19260281E0002C0B22 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
 		B7224B2126028281002C0B22 /* ResultsViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControlller.swift; sourceTree = "<group>"; };
 		B74915E32604BE4900B5EA4A /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +171,7 @@
 				B74915ED2604BFC600B5EA4A /* NavigationControllerRouter.swift */,
 				B7F1E327261034EF00B2C0E1 /* ViewControllerFactory.swift */,
 				B710A76D26104CDC00794E58 /* Question.swift */,
+				B710A77526105C8300794E58 /* iOSViewControllerFactory.swift */,
 			);
 			path = QuizApplication;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				B7975F1C2602BC8D00A8F23C /* TableViewHelperExtension.swift */,
 				B74915E92604BEC000B5EA4A /* NavigationControllerRouterTest.swift */,
 				B710A769261049AA00794E58 /* QuestionTest.swift */,
+				B710A77126105BCE00794E58 /* iOSViewControllerFactoryTest.swift */,
 			);
 			path = QuizApplicationTests;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 				B764B76D260200DD001FDDCA /* AppDelegate.swift in Sources */,
 				B7975F342602CC3600A8F23C /* PresentableAnswer.swift in Sources */,
 				B7975F3E2602CC7F00A8F23C /* WrongAnswerCell.swift in Sources */,
+				B710A77626105C8300794E58 /* iOSViewControllerFactory.swift in Sources */,
 				B74915EE2604BFC600B5EA4A /* NavigationControllerRouter.swift in Sources */,
 				B764B76F260200DD001FDDCA /* SceneDelegate.swift in Sources */,
 				B710A76E26104CDC00794E58 /* Question.swift in Sources */,
@@ -370,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B710A76A261049AA00794E58 /* QuestionTest.swift in Sources */,
+				B710A77226105BCE00794E58 /* iOSViewControllerFactoryTest.swift in Sources */,
 				B74915EA2604BEC000B5EA4A /* NavigationControllerRouterTest.swift in Sources */,
 				B764B7BA2602013E001FDDCA /* QuestionViewControllerTest.swift in Sources */,
 				B7975F1D2602BC8D00A8F23C /* TableViewHelperExtension.swift in Sources */,

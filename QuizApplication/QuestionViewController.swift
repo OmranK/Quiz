@@ -13,8 +13,8 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    private var question = ""
-    private var options = [String]()
+    private(set) var question = ""
+    private(set) var options = [String]()
     private var selection: (([String]) -> Void)? = nil
     private let reuseIdentifier = "Cell"
     
@@ -56,9 +56,6 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let indexPaths = tableView.indexPathsForSelectedRows else { return [] }
         return indexPaths.map { options[$0.row] }
     }
-    
-    
-    
     
     private func dequeueCell(in tableView: UITableView) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) {
