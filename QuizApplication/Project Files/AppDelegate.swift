@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        let viewController = ResultViewController(summary: "You got 1 of 2 correct", answers: [
+        let viewController = ResultsViewController(summary: "You got 1 of 2 correct", answers: [
             PresentableAnswer(question: "Question??Question??Question??Question??Question??Question??", answer: "Yeah!", wrongAnswer: nil),
             PresentableAnswer(question: "Another Question???", answer: "Hell no!", wrongAnswer: "Hell yeah!")
         ])

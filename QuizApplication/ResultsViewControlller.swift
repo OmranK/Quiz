@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ResultViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    private var summary = ""
-    private var answers: [PresentableAnswer] = []
+    private(set) var summary = ""
+    private(set) var answers: [PresentableAnswer] = []
 
     convenience init(summary: String, answers: [PresentableAnswer]) {
         self.init()
