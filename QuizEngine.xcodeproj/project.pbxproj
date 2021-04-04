@@ -123,10 +123,10 @@
 			children = (
 				B7E24F5E2604776A00D12914 /* Info.plist */,
 				B7E24F782604779600D12914 /* Flow.swift */,
-				B7E24F7C260477A100D12914 /* Result.swift */,
 				B7E24F80260477A600D12914 /* Router.swift */,
 				B7E24F84260477B000D12914 /* Game.swift */,
 				B7D7CD422610B8B700F1D3D3 /* Question.swift */,
+				B7E24F7C260477A100D12914 /* Result.swift */,
 			);
 			path = QuizEngine;
 			sourceTree = "<group>";
