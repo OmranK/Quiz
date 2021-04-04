@@ -19,28 +19,31 @@ struct ResultsPresenter {
     
     var presentableAnswers: [PresentableAnswer] {
         return questions.map { (question) in
-            guard let correctAnswer = correctAnswers[question], let userAnswer = result.answers[question] else {
+            guard let correctResponse = correctAnswers[question], let userAnswers = result.answers[question] else {
                 fatalError("Couldn't find correct answer for question: \(question)")
             }
-            return presentableAnswer(question, userAnswer, correctAnswer)
+            return presentableAnswer(question, userAnswers, correctResponse)
         }
     }
     
-    private func presentableAnswer(_ question: Question<String>, _ userAnswer: [String], _ correctAnswer: [String]) -> PresentableAnswer {
+    private func presentableAnswer(_ question: Question<String>, _ userAnswers: [String], _ correctResponse: [String]) -> PresentableAnswer {
         switch question {
         case .singleAnswer(let value), .multipleAnswer(let value):
             return PresentableAnswer(
                 question: value,
-                answer: formattedAnswer(correctAnswer),
-                wrongAnswer: formattedWrongAnswer(userAnswer, correctAnswer))
+                answer: formattedAnswer(correctResponse),
+                wrongAnswer: formattedWrongAnswer(userAnswers, correctResponse))
         }
     }
     
-    private func formattedAnswer(_ correctAnswer: [String]) -> String {
-        return correctAnswer.joined(separator: ", ")
+    private func formattedAnswer(_ correctResponse: [String]) -> String {
+        return correctResponse.joined(separator: ", ")
     }
     
-    private func formattedWrongAnswer(_ userAnswer:[String], _ correctAnswer: [String]) -> String? {
-        return userAnswer == correctAnswer ? nil : formattedAnswer(userAnswer)
+    private func formattedWrongAnswer(_ userAnswers:[String], _ correctResponse: [String]) -> String? {
+        for answer in userAnswers {
+            guard correctResponse.contains(answer) else { return formattedAnswer(userAnswers) }
+        }
+        return nil
     }
 }
