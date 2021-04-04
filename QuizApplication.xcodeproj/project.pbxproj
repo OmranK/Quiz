@@ -273,10 +273,10 @@
 			isa = PBXGroup;
 			children = (
 				B764B79F260200EC001FDDCA /* Project Files */,
+				B70A7A7C26197AC10080B478 /* Factory */,
+				B70A7A7B26197AB70080B478 /* Router */,
 				B70A7A78261979AA0080B478 /* ViewControllers */,
 				B70A7A7A26197AA30080B478 /* Model */,
-				B70A7A7B26197AB70080B478 /* Router */,
-				B70A7A7C26197AC10080B478 /* Factory */,
 				B70A7A7D26197AD40080B478 /* Presenters */,
 			);
 			path = QuizApplication;
@@ -285,11 +285,11 @@
 		B764B782260200DE001FDDCA /* QuizApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				B70A7A9726197C020080B478 /* Helper Extension */,
-				B70A7A7E26197AE50080B478 /* ViewController Tests */,
-				B70A7A8E26197B5C0080B478 /* Router Test */,
 				B70A7A8B26197B540080B478 /* Factory Test */,
+				B70A7A8E26197B5C0080B478 /* Router Test */,
+				B70A7A7E26197AE50080B478 /* ViewController Tests */,
 				B70A7A8626197B4C0080B478 /* Presenter Tests */,
+				B70A7A9726197C020080B478 /* Helper Extension */,
 				B764B785260200DE001FDDCA /* Info.plist */,
 			);
 			path = QuizApplicationTests;

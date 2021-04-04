@@ -6,30 +6,45 @@
 //
 
 import UIKit
+import QuizEngine
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var game: Game<Question<String>, [String], NavigationControllerRouter>?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        window.makeKeyAndVisible()
         
-        let viewController = ResultsViewController(summary: "You got 1 of 2 correct", answers: [
-            PresentableAnswer(question: "Question??Question??Question??Question??Question??Question??", answer: "Yeah!", wrongAnswer: nil),
-            PresentableAnswer(question: "Another Question???", answer: "Hell no!", wrongAnswer: "Hell yeah!")
-        ])
+        let question1 = Question.singleAnswer("What is Omran's age?")
+        let option1 = "27"
+        let option2 = "29"
+        let option3 = "25"
+        let optionsQ1 = [option1, option2, option3]
         
-//        let viewController = QuestionViewController(question: "A queston", options: ["Option1", "Option2", "Option3"]) { print ($0) }
-//        viewController.tableView.allowsMultipleSelection = true
         
-        viewController.loadViewIfNeeded()
-        window.rootViewController = viewController
+        let question2 = Question.multipleAnswer("What is Omran's nationality?")
+        let option4 = "American"
+        let option5 = "Canadian"
+        let option6 = "Uzbek"
+        let option7 = "French"
+        let optionsQ2 = [option4, option5, option6, option7]
+        
+        let questions = [question1, question2]
+        let options = [question1: optionsQ1, question2: optionsQ2]
+        let correctAnswers = [question1: [option1], question2: [option4, option6]]
+        
+        let navigationController = UINavigationController()
+        let factory = iOSViewControllerFactory(questions: questions, options: options, correctAnswers: correctAnswers)
+        let router = NavigationControllerRouter(navigationController, factory: factory)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        game = startGame(questions: questions, router: router, correctAnswers: correctAnswers)
         
         return true
     }
-
 }
 
