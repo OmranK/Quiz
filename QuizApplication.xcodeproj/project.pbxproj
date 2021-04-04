@@ -86,7 +86,7 @@
 		B764B778260200DE001FDDCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B764B77A260200DE001FDDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B764B77F260200DE001FDDCA /* QuizApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B764B785260200DE001FDDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B764B785260200DE001FDDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = QuizApplicationTests/Main/Info.plist; sourceTree = SOURCE_ROOT; };
 		B764B78A260200DE001FDDCA /* QuizApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B764B78E260200DE001FDDCA /* QuizApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApplicationUITests.swift; sourceTree = "<group>"; };
 		B764B790260200DE001FDDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,19 +134,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B70A7A78261979AA0080B478 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				B7975F422602CD0000A8F23C /* Cells */,
-				B70A7A7926197A4C0080B478 /* Helper Extension */,
-				B764B7AF2602012C001FDDCA /* QuestionViewController.swift */,
-				B764B7B02602012C001FDDCA /* QuestionViewController.xib */,
-				B7224B2126028281002C0B22 /* ResultsViewControlller.swift */,
-				B757339326028F4800D1E9A3 /* ResultsViewController.xib */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		B70A7A7926197A4C0080B478 /* Helper Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,48 +142,33 @@
 			path = "Helper Extension";
 			sourceTree = "<group>";
 		};
-		B70A7A7A26197AA30080B478 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B7975F332602CC3600A8F23C /* PresentableAnswer.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B70A7A7B26197AB70080B478 /* Router */ = {
+		B70A7A7B26197AB70080B478 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
 				B74915ED2604BFC600B5EA4A /* NavigationControllerRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		B70A7A7C26197AC10080B478 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
 				B7F1E327261034EF00B2C0E1 /* ViewControllerFactory.swift */,
-				B710A77526105C8300794E58 /* iOSViewControllerFactory.swift */,
 			);
-			path = Factory;
+			path = Routing;
 			sourceTree = "<group>";
 		};
-		B70A7A7D26197AD40080B478 /* Presenters */ = {
+		B70A7A7D26197AD40080B478 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B7975F332602CC3600A8F23C /* PresentableAnswer.swift */,
 				B7D7CD18261091C200F1D3D3 /* QuestionPresenter.swift */,
 				B7D7CD14261071A700F1D3D3 /* ResultsPresenter.swift */,
 			);
-			path = Presenters;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		B70A7A7E26197AE50080B478 /* ViewController Tests */ = {
+		B70A7A7E26197AE50080B478 /* UI Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B70A7A7F26197B330080B478 /* Helper Extension */,
 				B764B7B92602013E001FDDCA /* QuestionViewControllerTest.swift */,
 				B7224B19260281E0002C0B22 /* ResultsViewControllerTest.swift */,
 			);
-			path = "ViewController Tests";
+			path = "UI Tests";
 			sourceTree = "<group>";
 		};
 		B70A7A7F26197B330080B478 /* Helper Extension */ = {
@@ -207,29 +179,31 @@
 			path = "Helper Extension";
 			sourceTree = "<group>";
 		};
-		B70A7A8626197B4C0080B478 /* Presenter Tests */ = {
+		B70A7A8626197B4C0080B478 /* Presentation Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B70A7A9726197C020080B478 /* Helper Extension */,
 				B7D7CD082610707100F1D3D3 /* ResultsPresenterTest.swift */,
 				B7D7CD1C2610924000F1D3D3 /* QuestionPresenterTest.swift */,
 			);
-			path = "Presenter Tests";
+			path = "Presentation Tests";
 			sourceTree = "<group>";
 		};
-		B70A7A8B26197B540080B478 /* Factory Test */ = {
+		B70A7A8B26197B540080B478 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				B710A77126105BCE00794E58 /* iOSViewControllerFactoryTest.swift */,
+				B764B785260200DE001FDDCA /* Info.plist */,
 			);
-			path = "Factory Test";
+			path = Main;
 			sourceTree = "<group>";
 		};
-		B70A7A8E26197B5C0080B478 /* Router Test */ = {
+		B70A7A8E26197B5C0080B478 /* Routing Test */ = {
 			isa = PBXGroup;
 			children = (
 				B74915E92604BEC000B5EA4A /* NavigationControllerRouterTest.swift */,
 			);
-			path = "Router Test";
+			path = "Routing Test";
 			sourceTree = "<group>";
 		};
 		B70A7A9726197C020080B478 /* Helper Extension */ = {
@@ -272,12 +246,10 @@
 		B764B76B260200DD001FDDCA /* QuizApplication */ = {
 			isa = PBXGroup;
 			children = (
-				B764B79F260200EC001FDDCA /* Project Files */,
-				B70A7A7C26197AC10080B478 /* Factory */,
-				B70A7A7B26197AB70080B478 /* Router */,
-				B70A7A78261979AA0080B478 /* ViewControllers */,
-				B70A7A7A26197AA30080B478 /* Model */,
-				B70A7A7D26197AD40080B478 /* Presenters */,
+				B764B79F260200EC001FDDCA /* Main */,
+				B70A7A7D26197AD40080B478 /* Presentation */,
+				B70A7A7B26197AB70080B478 /* Routing */,
+				B7B44B7E26199BF4003F645C /* UI */,
 			);
 			path = QuizApplication;
 			sourceTree = "<group>";
@@ -285,12 +257,10 @@
 		B764B782260200DE001FDDCA /* QuizApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
-				B70A7A8B26197B540080B478 /* Factory Test */,
-				B70A7A8E26197B5C0080B478 /* Router Test */,
-				B70A7A7E26197AE50080B478 /* ViewController Tests */,
-				B70A7A8626197B4C0080B478 /* Presenter Tests */,
-				B70A7A9726197C020080B478 /* Helper Extension */,
-				B764B785260200DE001FDDCA /* Info.plist */,
+				B70A7A8B26197B540080B478 /* Main */,
+				B70A7A8626197B4C0080B478 /* Presentation Tests */,
+				B70A7A8E26197B5C0080B478 /* Routing Test */,
+				B70A7A7E26197AE50080B478 /* UI Tests */,
 			);
 			path = QuizApplicationTests;
 			sourceTree = "<group>";
@@ -304,16 +274,16 @@
 			path = QuizApplicationUITests;
 			sourceTree = "<group>";
 		};
-		B764B79F260200EC001FDDCA /* Project Files */ = {
+		B764B79F260200EC001FDDCA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B710A77526105C8300794E58 /* iOSViewControllerFactory.swift */,
 				B764B76C260200DD001FDDCA /* AppDelegate.swift */,
 				B764B76E260200DD001FDDCA /* SceneDelegate.swift */,
 				B764B775260200DE001FDDCA /* Assets.xcassets */,
-				B764B777260200DE001FDDCA /* LaunchScreen.storyboard */,
 				B764B77A260200DE001FDDCA /* Info.plist */,
 			);
-			path = "Project Files";
+			path = Main;
 			sourceTree = "<group>";
 		};
 		B7975F422602CD0000A8F23C /* Cells */ = {
@@ -325,6 +295,44 @@
 				B7975F262602C4C400A8F23C /* WrongAnswerCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B7B44B7E26199BF4003F645C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B7B44B8326199CA5003F645C /* Launch */,
+				B7B44B7F26199C55003F645C /* Question */,
+				B7B44B8026199C71003F645C /* Results */,
+				B70A7A7926197A4C0080B478 /* Helper Extension */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B7B44B7F26199C55003F645C /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				B764B7AF2602012C001FDDCA /* QuestionViewController.swift */,
+				B764B7B02602012C001FDDCA /* QuestionViewController.xib */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		B7B44B8026199C71003F645C /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				B7975F422602CD0000A8F23C /* Cells */,
+				B7224B2126028281002C0B22 /* ResultsViewControlller.swift */,
+				B757339326028F4800D1E9A3 /* ResultsViewController.xib */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		B7B44B8326199CA5003F645C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B764B777260200DE001FDDCA /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -651,7 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5752TAHCMC;
-				INFOPLIST_FILE = "$(SRCROOT)/QuizApplication/Project Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/QuizApplication/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,7 +678,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5752TAHCMC;
-				INFOPLIST_FILE = "$(SRCROOT)/QuizApplication/Project Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/QuizApplication/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -690,7 +698,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5752TAHCMC;
-				INFOPLIST_FILE = QuizApplicationTests/Info.plist;
+				INFOPLIST_FILE = QuizApplicationTests/Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,7 +722,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5752TAHCMC;
-				INFOPLIST_FILE = QuizApplicationTests/Info.plist;
+				INFOPLIST_FILE = QuizApplicationTests/Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
