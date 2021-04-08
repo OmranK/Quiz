@@ -1,0 +1,3 @@
+[submodule "QuizEngine2"]
+	path = QuizEngine2
+	url = https://github.com/OmranK/QuizEngine2
