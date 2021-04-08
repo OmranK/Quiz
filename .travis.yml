@@ -1,4 +1,4 @@
 os: osx
 osx_image: xcode12.4
 language: swift
-script: xcodebuild clean build test -project QuizEngine.xcodeproj -scheme "QuizEngine" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+script: xcodebuild clean build test -workspace QuizApplication.xcworkspace -scheme "QuizApplication" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.4,name=iPhone 11 Pro" ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
